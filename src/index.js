@@ -1,23 +1,33 @@
-/* const element = document.createElement("h1"); //creamos elemntos 
-element.innerText = "Jovenes Programadores"; // El texto que vamos colocar 
-
-const container = document.getElementById('root') //Creamos la variable que obtiene el ID
-
-container.appendChild(element); // que qqueremos mostar
-
- */
-
 import React from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+
+const style = {
+  color: "red"
+}
+
+function tictac(){
+  const element = (
+    <div>
+        <h1 style={style}> Reloj en React!</h1>
+        <h2> Son las {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  const container = document.getElementById('root');
+  ReactDOM.render(element, container);
+
+}
+
+setInterval(tictac,1000);
 
 
-const name = 'Nico';
 
-const element = <h1>¡ Wecon to {name}  React en jovenes programadores</h1>;
+/* const name = 3*4;
+
+const element = <h1> {name} </h1>;
 
 const container= document.getElementById("root");
 
-ReactDOM.render(element, container);
+ReactDOM.render(element, container); */
 
 /* import React from 'react';
 import ReactDOM from 'react-dom';
